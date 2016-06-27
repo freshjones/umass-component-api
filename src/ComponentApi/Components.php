@@ -18,9 +18,7 @@ class Components
 	{
 		
 		$this->templateDir = __DIR__ . '/templates';
-
 		$this->loader = new \Twig_Loader_Filesystem($this->templateDir);
-
 		$this->twig = new \Twig_Environment($this->loader);
 		
 		$this->components = array();

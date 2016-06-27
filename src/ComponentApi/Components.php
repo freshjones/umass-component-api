@@ -21,7 +21,7 @@ class Components
 	{
 		$component = new \stdClass();
 		$component->key = 'header';
-		$component->template = '<div>Hello Dude</div>';
+		$component->template = '<div>Hello Dude this is great!</div>';
 
 		$this->addComponent($component);
 

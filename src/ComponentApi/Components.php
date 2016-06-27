@@ -7,6 +7,7 @@ class Components
 	private $components;
 	private $twig;
 	private $loader;
+	private $templateDir;
 
 	public function __construct()
 	{
@@ -15,10 +16,10 @@ class Components
 
 	public function initComponents()
 	{
+		
+		$this->templateDir = __DIR__ . '/templates';
 
-		$this->loader = new \Twig_Loader_Array(array(
-		    'index' => 'Hello {{ name }}!',
-		));
+		$this->loader = new \Twig_Loader_Filesystem($this->templateDir);
 
 		$this->twig = new \Twig_Environment($this->loader);
 		
@@ -31,7 +32,7 @@ class Components
 
 		$component = new \stdClass();
 		$component->key = 'header';
-		$component->template = $this->twig->render('index', array('name' => 'Fabien'));
+		$component->template = $this->twig->render('header.html', array('name' => 'Fabien'));
 
 		$this->addComponent($component);
 

@@ -1,0 +1,21 @@
+{
+    "name": "freshjones/umass-component-api",
+    "description": "PHP Component API Library",
+    "keywords": ["component","api"],
+    "homepage": "https://github.com/freshjones/umass-component-api",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "William Jones",
+            "email": "billy@freshjones.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {"ComponentApi\\": "src/ComponentApi"}
+    }
+}
